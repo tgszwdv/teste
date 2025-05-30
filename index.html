@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visualizador de Script do Google</title>
     <style>
-        /* Estilos básicos para o corpo e o iframe */
         body, html {
             margin: 0;
             padding: 0;
@@ -20,74 +19,29 @@
             justify-content: center;
             width: 100%;
             height: 100%;
-            padding: 1rem; /* Adiciona um pouco de espaço ao redor */
+            /* padding: 1rem; Removido para tela cheia real do iframe */
             box-sizing: border-box;
         }
         iframe {
-            width: 100%; /* Ocupa a largura total do contêiner */
-            height: 100%; /* Ocupa a altura total do contêiner */
-            border: 1px solid #ccc; /* Borda sutil */
-            border-radius: 8px; /* Cantos arredondados */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
-        }
-        /* Estilo para o cabeçalho, se desejado */
-        .header {
-            width: 100%;
-            padding: 1rem;
-            background-color: #f8f9fa; /* Cor de fundo clara para o cabeçalho */
-            text-align: center;
-            border-bottom: 1px solid #dee2e6;
-            box-sizing: border-box;
-            margin-bottom: 1rem; /* Espaço entre o cabeçalho e o iframe */
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 1.5rem;
-            color: #333;
-        }
-
-        /* Responsividade: em telas menores, o padding do container pode ser reduzido */
-        @media (max-width: 600px) {
-            .iframe-container {
-                padding: 0.5rem;
-            }
-            .header h1 {
-                font-size: 1.2rem;
-            }
+            width: 100%; 
+            height: 100%; 
+            border: none; /* Removida a borda para um visual mais limpo */
+            /* border-radius: 8px; */
+            /* box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
         }
     </style>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body class="bg-gray-100">
-    <!-- <div class="header">
-        <h1>Meu Aplicativo do Google Script</h1>
-    </div> -->
-
-    <div class="iframe-container p-4 md:p-8">
+    </head>
+<body>
+    <div class="iframe-container">
         <iframe 
-            src="https://script.google.com/macros/s/AKfycbzSzBHJOn6aVF7fM4fqqDdBRhK5J9oq9Kvs9kxr9LhTDw6gStYXCfSyU8IUv86iDFmy/exec"
-            frameborder="0" 
-            allowfullscreen
-            title="Conteúdo do Google Script">
+            src="https://script.google.com/macros/s/AKfycbw4gUlp-At6G1bV1fPWgHbEtTcdp3kHRqCmx_wP628N6sxhut1fXO0K5JP1AHjRV3fU/exec"
+            title="Conteúdo do Google Script"
+            allow="autoplay 'none'; camera 'none'; encrypted-media 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; screen-wake-lock 'none'; usb 'none'; clipboard-read 'none'; clipboard-write 'none'; web-share 'none'; accelerometer 'none'">
             Seu navegador não suporta iframes. Por favor, acesse o conteúdo diretamente em: 
-            <a href="https://script.google.com/macros/s/AKfycbzSzBHJOn6aVF7fM4fqqDdBRhK5J9oq9Kvs9kxr9LhTDw6gStYXCfSyU8IUv86iDFmy/exec" target="_blank">
+            <a href="https://script.google.com/macros/s/AKfycbw4gUlp-At6G1bV1fPWgHbEtTcdp3kHRqCmx_wP628N6sxhut1fXO0K5JP1AHjRV3fU/exec" target="_blank">
                 Link para o Script
             </a>
         </iframe>
     </div>
-
-    <script>
-        // Script para garantir que o iframe se ajuste bem, se necessário.
-        // Neste caso, CSS é suficiente, mas pode ser útil para cenários mais complexos.
-        window.addEventListener('resize', () => {
-            const iframe = document.querySelector('iframe');
-            if (iframe) {
-                // Exemplo: ajustar altura baseada no conteúdo (requer comunicação com o iframe)
-                // ou simplesmente garantir que as proporções sejam mantidas se necessário.
-                // Para este caso, o CSS 'height: 100%' e 'width: 100%' no contêiner já cuida disso.
-            }
-        });
-    </script>
 </body>
 </html>
